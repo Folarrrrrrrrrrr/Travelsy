@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "./Button";
 import "../styles/navStyle.css";
 import "../styles/navResponsiveness.css";
-import userIcon from "../src/assets/images/User.Jpeg";
+import userIcon from "../src/assets/images/User.jpeg";
 import searchIcon from "../src/assets/images/search.png";
 import bookmarkIcon from "../src/assets/images/Shape.png";
 
