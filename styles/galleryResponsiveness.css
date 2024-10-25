@@ -1,0 +1,158 @@
+/* 
+@media (min-width: 360px) and (max-width: 765px) {
+  .divResponsiveness {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    min-height: 300px;
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+@media (min-width: 768px) and (max-width: 1104px) {
+} */
+
+/* Base gallery styles for larger screens */
+/* .galleryContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  .galleryContainer div {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    min-height: 300px;
+  }
+  
+  .largeStyle {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+  .mediumStyle {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  
+  .smallStyle {
+    grid-row: span 2;
+    min-height: 100px;
+  }
+  
+  .wideStyle {
+    grid-column: span 3;
+  } */
+
+/* Form styling */
+/* form {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .question-label {
+    font-size: 1.2rem;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .formBtn {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .formBtn:hover {
+    background-color: #e65c00;
+  } */
+
+/* Media Queries */
+
+/* Adjust grid layout for medium screens */
+/* @media (max-width: 1024px) {
+    .galleryContainer {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+  
+    .largeStyle {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+  
+    .mediumStyle,
+    .smallStyle {
+      grid-column: span 1;
+    }
+  
+    .question-label {
+      font-size: 1rem;
+    }
+  
+    .formBtnText {
+      font-size: 1.1rem;
+    }
+  } */
+
+/* Adjust grid layout for small screens */
+@media (max-width: 768px) {
+  .galleryContainer {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 30%;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: 1.5em;
+    display: flex;
+  }
+
+  
+
+  .question-label {
+    font-size: 0.9rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+  form {
+    padding: 0 10px;
+  }
+
+  .checkbox-group {
+    gap: 5px;
+  }
+
+  .formBtn {
+    width: 25%;
+    height: 40px;
+    margin-top: -10px;
+    /* padding: 12px; */
+  }
+  .formBtnText {
+    text-align: center;
+    padding-top: -10px;
+    font-weight: 500;
+  }
+}

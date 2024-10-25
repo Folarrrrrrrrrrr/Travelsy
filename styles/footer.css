@@ -1,0 +1,122 @@
+.footer {
+    background-color: #f8f8f8;
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .footer p,
+  .footer a {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .footer a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer ul li {
+    margin-bottom: 10px;
+  }
+  
+  .contact-info {
+    margin-top: 15px;
+  }
+  
+  .help-section, .company-section, .services-section, .quick-links, .mailing-list {
+    flex: 1;
+    min-width: 200px;
+    margin-right: 20px;
+  }
+  
+  .mailing-list .subscribe {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .mailing-list input {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .mailing-list button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff5200;
+    color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .mailing-list button:hover {
+    background-color: #e65c00;
+  }
+  
+  .footer-bottom {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    margin: 0px 80px;
+  }
+  .footer-bottom-one {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin-right: 5%;
+  }
+  .footer-bottom-two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  select{
+    border: 0.5px solid grey;
+    padding: 5px;
+    color: grey;
+  }
+  .payment-methods img {
+    height: 1.2vw;
+    margin-right: 10px;
+  }
+  
+  .footer-credits {
+    text-align: right;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+    }
+  
+    .footer-credits {
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+  

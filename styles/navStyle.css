@@ -1,0 +1,130 @@
+.navContainer {
+  /* height:30px; */
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.logo {
+  align-self: center;
+}
+
+.hamburger{
+   display: none;
+}
+.hamburgerContent{
+    width: 90%;
+    display: flex;
+}
+.linksContainer {
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  list-style: none;
+  width: 60%;
+  margin: 0;
+  padding: 0;
+}
+.linksContainer li {
+  margin: 0 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.othersSection {
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  width: 40%;
+  margin-top: 8px;
+  /* margin-left: 58px; */
+}
+.childrenContent {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding-left: 5px;
+}
+.regBtn {
+  background-color: #ff5200;
+  border-radius: 30% 2px;
+  padding: 5px 3px;
+  color: #ffffff;
+  width: 28%;
+  height: 40px;
+}
+.bookmarkIcon {
+  height: 18px;
+  width: 15px;
+  font-weight: 800;
+  margin-top: -20px;
+}
+.regText{
+  margin-top: 0px;
+  margin-left: 5px;
+}
+.userIcon {
+  width: 20%;
+  border-radius: 50%;
+}
+.dropdown {
+  margin-left: -25px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 10%;
+}
+
+/* Base styles for desktop */
+/* .navContainer {
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  } */
+
+/* .navContainer .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  } */
+
+/* .othersSection {
+    display: flex;
+    align-items: center;
+  }
+  
+  .othersSection .searchIcon,
+  .othersSection .userIcon,
+  .othersSection .dropdown {
+    margin-left: 15px;
+  }
+  
+  .othersSection .regBtn {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .othersSection .regBtn:hover {
+    background-color: #e65c00;
+  }
+  
+  .childrenContent {
+    display: flex;
+    align-items: center;
+  } */
+
+/* .bookmarkIcon{
+    display: none;
+    height: 18px;
+    width: 15px;
+    font-weight: 800;
+    margin: 5px;
+} */
+/* .bookmarkIcon {
+    margin-right: 5px;
+  } */

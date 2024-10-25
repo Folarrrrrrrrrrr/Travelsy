@@ -1,0 +1,132 @@
+/* Base styles for testimonials section */
+/* .testimonials-section {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .testimonials-heading {
+    margin-bottom: 30px;
+  }
+  
+  .testimonials-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  
+  .testimonials-title .highlight {
+    color: #ff6600;
+  }
+  
+  .testimonials-slider .testimonial-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonials-slider .testimonial-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .testimonial-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .testimonial-content {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .author-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .author-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+  } */
+
+/* Media Queries */
+
+/* Tablet view (up to 768px) */
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+  .testimonials-heading {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+  .testimonials-title {
+    font-size: 2rem;
+  }
+
+  .testimonials-slider .testimonial-card {
+    padding: 15px;
+    font-size: 1.1rem;
+  }
+
+  .testimonial-title {
+    font-size: 1.5rem;
+  }
+
+  .testimonial-content {
+    font-size: 1rem;
+  }
+
+  .author-name {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile view (up to 480px) */
+@media (max-width: 480px) {
+  .testimonials-section {
+    padding: 10px;
+  }
+
+  .testimonials-title {
+    font-size: 1.8rem;
+  }
+
+  .testimonials-slider .testimonial-card {
+    padding: 10px;
+  }
+
+  .testimonial-title {
+    font-size: 1.3rem;
+  }
+
+  .testimonial-content {
+    font-size: 0.9rem;
+  }
+
+  .author-name {
+    font-size: 0.9rem;
+  }
+
+  .author-image {
+    width: 40px;
+    height: 40px;
+  }
+}
