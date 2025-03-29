@@ -14,6 +14,7 @@ import lake from "../src/assets/images/lake.png";
 import waterfall from "../src/assets/images/waterfall.png";
 import forest from "../src/assets/images/forest.png";
 import { useActivityContext } from "../state/formContext";
+
 const Gallery = () => {
   const { state } = useApiContext();
 
@@ -25,7 +26,7 @@ const Gallery = () => {
   if (error) {
     return <> {error} </>;
   }
-
+  const [clickedImg, setClickedImg] = useState()
   // Defining styles using JavaScript objects
   const itemStyle = {
     backgroundSize: "cover",
@@ -164,12 +165,15 @@ const Gallery = () => {
 
   // Toggle activity selection
   const toggleActivity = (activity) => {
-    setSelectedActivities((prev) =>
-      prev.includes(activity)
-        ? prev.filter((act) => act !== activity)
-        : [...prev, activity]
-    );
+    setSelectedActivities((prev) => {
+      if (prev.includes(activity)) {
+        return prev.filter((act) => act !== activity); // Remove if already selected
+      } else {
+        return [...prev, activity]; // Add if not selected
+      }
+    });
   };
+  
   // Handle the selection of time duration
   const handleTimeChange = (event) => {
     setSelectedTime(event.target.value);
@@ -180,11 +184,33 @@ const Gallery = () => {
     setInterests(event.target.value);
   };
 
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   // Add the logic to use the selected preferences
+  //   console.log("Time selected:", selectedTime);
+  //   console.log("Interests:", interests);
+  // };
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Add the logic to use the selected preferences
-    console.log("Time selected:", selectedTime);
-    console.log("Interests:", interests);
+
+    const formData = {
+      time: time,
+      selectedActivities: selectedActivities,
+    };
+
+    console.log("Form Data:", formData);
+
+    // Example submission (replace with actual API call)
+    fetch("https://your-api-endpoint.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => console.log("Success:", data))
+      .catch((error) => console.error("Error:", error));
   };
 
   return (
@@ -232,7 +258,7 @@ const Gallery = () => {
           </div>
         </div>
         <p className="custom-padding">What are your interests?</p>
-        <div className="galleryContainer">
+        {/* <div className="galleryContainer">
           {sortedData.map((item, index) => (
             <GalleryCard
               divReponsiveness="divResponsiveness"
@@ -247,10 +273,47 @@ const Gallery = () => {
               spanProps={sortedData.title}
             />
           ))}
+        </div> */}
+        {/* <div className="galleryContainer">
+          {sortedData.map((item, index) => (
+            <GalleryCard
+              divReponsiveness="divResponsiveness"
+              className={
+                selectedActivities.includes(item.title) ? "selected" : ""
+              }
+              gridItem={item.customerStyle}
+              key={item.title}
+              title={item.title}
+              imageUrl={item.imageUrl}
+              onClick={() => toggleActivity(item.title)} // Fix: Properly toggle the activity
+              spanProps={item.title}
+            />
+          ))}
+        </div> */}
+        <div className="galleryContainer">
+          {sortedData.map((item, index) => (
+            <GalleryCard
+              divReponsiveness="divResponsiveness"
+              className={
+                selectedActivities.includes(item.title) ? "selected" : ""
+              }
+              gridItem={item.customerStyle}
+              key={item.title}
+              title={item.title}
+              imageUrl={item.imageUrl}
+              onclick={() => toggleActivity(item.title)} // Ensure it toggles selection
+              spanProps={item.title}
+            />
+          ))}
         </div>
-        <Button btnStyle="formBtn">
-          <h2 className="formBtnText"> Set</h2>{" "}
-        </Button>
+
+        {/* <Button  btnStyle="formBtn">
+          <h2 className="formBtnText" > Set</h2>{" "}
+        </Button> */}
+        <button type="subnit" className="formBtnText">
+          {" "}
+          Set
+        </button>
       </form>
     </>
   );

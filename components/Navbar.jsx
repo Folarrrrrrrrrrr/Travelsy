@@ -37,7 +37,10 @@ const Navbar = () => {
               <h4 className="regText">Reservation</h4>
             </div>
           </Button>
-          <img className="searchIcon" src={searchIcon} alt="" />
+          <div style={{display:"grid", padding:"5px" }}>
+            <input type="text" style={{ height:"30px",paddingLeft:"25px", borderRadius:"10px", marginTop:"15px"}} />
+            <img style={{position:"relative", top:"-25px", left:"5px"}} className="" src={searchIcon} alt="" />
+          </div>
           <img className="userIcon" src={userIcon} alt="" />
           <select className="dropdown" name="" id="">
             <option value=""></option>
