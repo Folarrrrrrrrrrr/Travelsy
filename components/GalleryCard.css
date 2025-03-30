@@ -1,0 +1,32 @@
+/* Default image styling */
+.galleryCard {
+    position: relative;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  
+  /* Highlight selected image */
+  .galleryCard.selected {
+    border: 4px solid rgba(255, 102, 0, 0.4); /* Orange border */
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.14);
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  /* Add overlay effect for selected images */
+  .galleryCard.selected::after {
+    content: "✔"; /* Checkmark */
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    background: rgba(199, 80, 1, 0.77);
+    color: white;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  

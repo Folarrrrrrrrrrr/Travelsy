@@ -297,6 +297,7 @@ const Gallery = () => {
               className={
                 selectedActivities.includes(item.title) ? "selected" : ""
               }
+              isSelected={selectedActivities.includes(item.title)}
               gridItem={item.customerStyle}
               key={item.title}
               title={item.title}
@@ -310,7 +311,7 @@ const Gallery = () => {
         {/* <Button  btnStyle="formBtn">
           <h2 className="formBtnText" > Set</h2>{" "}
         </Button> */}
-        <button type="subnit" className="formBtnText">
+        <button type="subnit" className="formBtnText formBtn" style={{cursor:"pointer"}}>
           {" "}
           Set
         </button>
